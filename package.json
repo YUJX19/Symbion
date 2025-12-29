@@ -1,0 +1,138 @@
+{
+    "name": "symbion",
+    "version": "0.9.0",
+    "description": "Powerful Integrated Sensing and Communication (ISAC) Algorithm Library for Research and Development",
+    "main": "./dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "browser": {
+                "types": "./dist/browser.d.ts",
+                "import": "./dist/browser.mjs",
+                "require": "./dist/browser.js"
+            },
+            "node": {
+                "types": "./dist/node.d.ts",
+                "import": "./dist/node.mjs",
+                "require": "./dist/node.js"
+            },
+            "default": {
+                "types": "./dist/index.d.ts",
+                "import": "./dist/index.mjs",
+                "require": "./dist/index.js"
+            }
+        },
+        "./browser": {
+            "types": "./dist/browser.d.ts",
+            "import": "./dist/browser.mjs",
+            "require": "./dist/browser.js"
+        },
+        "./node": {
+            "types": "./dist/node.d.ts",
+            "import": "./dist/node.mjs",
+            "require": "./dist/node.js"
+        },
+        "./core": {
+            "types": "./dist/src/core.d.ts",
+            "import": "./dist/src/core.mjs",
+            "require": "./dist/src/core.js"
+        },
+        "./ai": {
+            "types": "./dist/src/ai.d.ts",
+            "import": "./dist/src/ai.mjs",
+            "require": "./dist/src/ai.js"
+        },
+        "./isac": {
+            "types": "./dist/src/isac.d.ts",
+            "import": "./dist/src/isac.mjs",
+            "require": "./dist/src/isac.js"
+        },
+        "./models": {
+            "types": "./dist/src/models.d.ts",
+            "import": "./dist/src/models.mjs",
+            "require": "./dist/src/models.js"
+        },
+        "./tasks": {
+            "types": "./dist/src/tasks.d.ts",
+            "import": "./dist/src/tasks.mjs",
+            "require": "./dist/src/tasks.js"
+        },
+        "./extras": {
+            "types": "./dist/src/extras.d.ts",
+            "import": "./dist/src/extras.mjs",
+            "require": "./dist/src/extras.js"
+        },
+        "./package.json": "./package.json",
+        "./*": null
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE",
+        "assets"
+    ],
+    "keywords": [
+        "isac",
+        "5g",
+        "6g",
+        "wireless",
+        "sensing",
+        "communication",
+        "symbion",
+        "beamforming",
+        "robotics",
+        "trajectory-optimization",
+        "drone",
+        "minco",
+        "otfs"
+    ],
+    "author": "symbion-io",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YUJX19/Symbion"
+    },
+    "homepage": "https://symbion-io.org",
+    "bugs": {
+        "url": "https://github.com/YUJX19/Symbion/issues"
+    },
+    "scripts": {
+        "build": "tsup",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:cov": "vitest run --coverage",
+        "test:ui": "vitest --ui",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write \"**/*.{ts,json,md}\"",
+        "format:check": "prettier --check \"**/*.{ts,json,md}\"",
+        "typecheck": "tsc --noEmit",
+        "check": "npm run typecheck && npm run lint && npm run test",
+        "test:all": "./scripts/test-all.sh",
+        "test:quick": "./scripts/test-all.sh --quick",
+        "prepublishOnly": "npm run check && npm run build",
+        "task:isac1": "npx tsx src/tasks/isac-trajectory/task1/cli.ts"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "@types/node": "^25.0.3",
+        "@typescript-eslint/eslint-plugin": "^8.50.1",
+        "@typescript-eslint/parser": "^8.50.1",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "globals": "^16.5.0",
+        "prettier": "^3.7.4",
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0",
+        "typescript-eslint": "^8.50.1",
+        "vitest": "^1.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: 'Symbion: An Open-Source TypeScript Library for ISAC Research'
+message: 'If you use this software, please cite it using the metadata from this file.'
+type: software
+authors:
+  - name: Symbion Contributors
+    # Individual authors can be added here when ready
+    # Example:
+    # - family-names: Doe
+    #   given-names: John
+    #   orcid: https://orcid.org/0000-0000-0000-0000
+    #   affiliation: University Name
+abstract: >-
+  Symbion is a comprehensive TypeScript library for simulating and implementing
+  6G Integrated Sensing and Communication (ISAC) systems. It bridges the gap
+  between wireless communication theory and robotics dynamics, providing
+  reproducible research environments that run natively in browsers and Node.js.
+keywords:
+  - isac
+  - integrated-sensing-and-communication
+  - 6g
+  - wireless-communication
+  - trajectory-optimization
+  - minco
+  - uav
+  - robotics
+  - typescript
+  - simulation
+license: MIT
+version: '1.0.0'
+date-released: '2025-12-27'
+repository-code: 'https://github.com/YUJX19/Symbion'
+url: 'https://symbion-io.org'
+# doi: 10.5281/zenodo.XXXXXXX  # Uncomment and update after Zenodo archival

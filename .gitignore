@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Package
+*.tgz
+src/tasks/u2u-mcs/logs/
+*.jsonl
+
+# JOSS paper build artifacts
+paper/paper.pdf
+paper/jats/
+
+# Internal development records
+CHANGELOG.md
+TESTING-GUIDE.md
+VERSION-UPGRADE-PLAN.md
+# API-MIGRATION-GUIDE reference is in docs, so we keep that one as it is valuable for users.

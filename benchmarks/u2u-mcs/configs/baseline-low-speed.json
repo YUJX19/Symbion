@@ -1,0 +1,41 @@
+{
+    "name": "baseline-low-speed",
+    "description": "Baseline configuration with low relative speed (pedestrian scenario)",
+    "seed": 42,
+    "episodeLength": 1000,
+    "stepDurationMs": 1,
+    "blerTarget": 1e-5,
+    "mcsTableId": "nr-table1",
+    "observationKeys": [
+        "sinrDb",
+        "distance",
+        "relativeSpeed",
+        "recentAckRate",
+        "recentBler",
+        "lastMcs"
+    ],
+    "channelModel": "rician",
+    "ricianKDb": 10,
+    "mobilityConfig": {
+        "relativeSpeedRange": [
+            0,
+            5
+        ],
+        "distanceRange": [
+            10,
+            100
+        ],
+        "dynamicSpeed": true,
+        "speedChangeRate": 0.2
+    },
+    "rewardWeights": {
+        "throughput": 1.0,
+        "blerPenalty": 100.0,
+        "switchPenalty": 0.1
+    },
+    "bandwidthHz": 10000000,
+    "txPowerDbm": 23,
+    "noiseFigureDb": 9,
+    "numRBs": 50,
+    "enablePowerControl": false
+}

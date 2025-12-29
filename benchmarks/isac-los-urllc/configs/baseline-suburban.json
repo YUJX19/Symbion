@@ -1,0 +1,116 @@
+{
+    "name": "baseline-suburban",
+    "description": "Suburban scenario with 3 ground users (2 URLLC, 1 eMBB)",
+    "seed": 42,
+    "numWaypoints": 20,
+    "waypointDurationS": 1.0,
+    "areaBounds": [
+        -500,
+        -500,
+        500,
+        500
+    ],
+    "startPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 100
+    },
+    "users": [
+        {
+            "id": "u1",
+            "position": {
+                "x": 100,
+                "y": 0,
+                "z": 0
+            },
+            "minRate": 1000000,
+            "maxLatencyMs": 1,
+            "reliabilityTarget": 0.99999,
+            "isUrllc": true
+        },
+        {
+            "id": "u2",
+            "position": {
+                "x": -100,
+                "y": 50,
+                "z": 0
+            },
+            "minRate": 5000000,
+            "maxLatencyMs": 100,
+            "reliabilityTarget": 0.99,
+            "isUrllc": false
+        },
+        {
+            "id": "u3",
+            "position": {
+                "x": 0,
+                "y": 150,
+                "z": 0
+            },
+            "minRate": 1000000,
+            "maxLatencyMs": 1,
+            "reliabilityTarget": 0.99999,
+            "isUrllc": true
+        }
+    ],
+    "obstacles": [
+        {
+            "id": "b1",
+            "position": {
+                "x": 50,
+                "y": 50,
+                "z": 15
+            },
+            "dimensions": [
+                30,
+                30,
+                30
+            ]
+        },
+        {
+            "id": "b2",
+            "position": {
+                "x": -50,
+                "y": 100,
+                "z": 20
+            },
+            "dimensions": [
+                40,
+                40,
+                40
+            ]
+        }
+    ],
+    "kinematics": {
+        "maxSpeed": 20,
+        "maxAcceleration": 5,
+        "minAltitude": 50,
+        "maxAltitude": 200,
+        "hoverPower": 100,
+        "propulsionEfficiency": 0.8
+    },
+    "comm": {
+        "carrierFrequencyHz": 3500000000,
+        "bandwidthHz": 20000000,
+        "txPowerDbm": 30,
+        "noiseFigureDb": 9,
+        "losModel": "suburban",
+        "plExponentLos": 2.0,
+        "plExponentNlos": 3.5,
+        "ricianKLosDb": 10
+    },
+    "sensing": {
+        "radarCrossSection": 1.0,
+        "sensingSinrThresholdDb": 10,
+        "fieldOfViewDeg": 60
+    },
+    "rewardWeights": {
+        "throughput": 1.0,
+        "losPersistence": 0.5,
+        "energy": 0.1,
+        "urllcPenalty": 10.0,
+        "sensingPenalty": 0.3
+    },
+    "urllcBlerTarget": 0.00001,
+    "episodeHorizon": 50
+}

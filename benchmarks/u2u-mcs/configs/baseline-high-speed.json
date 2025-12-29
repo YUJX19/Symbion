@@ -1,0 +1,41 @@
+{
+    "name": "baseline-high-speed",
+    "description": "Baseline configuration with high relative speed (urban highway scenario)",
+    "seed": 42,
+    "episodeLength": 1000,
+    "stepDurationMs": 1,
+    "blerTarget": 1e-5,
+    "mcsTableId": "nr-table1",
+    "observationKeys": [
+        "sinrDb",
+        "distance",
+        "relativeSpeed",
+        "recentAckRate",
+        "recentBler",
+        "lastMcs"
+    ],
+    "channelModel": "rician",
+    "ricianKDb": 3,
+    "mobilityConfig": {
+        "relativeSpeedRange": [
+            20,
+            40
+        ],
+        "distanceRange": [
+            50,
+            300
+        ],
+        "dynamicSpeed": true,
+        "speedChangeRate": 1.0
+    },
+    "rewardWeights": {
+        "throughput": 1.0,
+        "blerPenalty": 100.0,
+        "switchPenalty": 0.1
+    },
+    "bandwidthHz": 10000000,
+    "txPowerDbm": 23,
+    "noiseFigureDb": 9,
+    "numRBs": 50,
+    "enablePowerControl": false
+}
