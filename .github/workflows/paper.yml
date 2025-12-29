@@ -1,6 +1,7 @@
 name: Paper generation
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'paper/**'
